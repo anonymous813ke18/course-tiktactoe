@@ -1,0 +1,190 @@
+:root {
+    --blue-bg-color: #3575CA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.player-names {
+    display: flex;
+    gap: 50px;
+
+    color: var(--blue-bg-color);
+}
+
+.player {
+    flex: 1;
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 3px solid var(--blue-bg-color);
+    font-size: auto;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 5px;
+
+    background-color: var(--blue-bg-color);
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: white;
+    color: var(--blue-bg-color);
+    /* font-weight: bold; */
+    font-size: 150px;
+    font-family: cursive;
+}
+
+.game-status {
+    border: none;
+    outline: none;
+    color: var(--blue-bg-color);
+    border-radius: 10px;
+    padding: 50px 100px;
+    margin: auto;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.game-status::backdrop {
+    backdrop-filter: blur(4px);
+}
+
+.btn-container {
+    display: flex;
+    gap: 50px;
+}
+
+.btn {
+    flex: 1;
+    padding: 20px;
+    font-size: 18pt;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    letter-spacing: 5px;
+    background-color: white;
+    color: var(--blue-bg-color);
+}
+
+.btn:hover {
+    color: white;
+    background-color: var(--blue-bg-color);
+    transition: 50ms ease-in-out;
+    cursor: pointer;
+}
+
+.btn:active {
+    background-color: white;
+    color: var(--blue-bg-color);
+}
+
+.start-game {
+    padding: 20px 75px;
+    font-size: 18pt;
+    font-weight: bold;
+    border: 1px solid var(--blue-bg-color);
+    border-radius: 10px;
+    letter-spacing: 5px;
+    background-color: white;
+    color: var(--blue-bg-color);
+}
+
+.start-game:hover {
+    color: white;
+    background-color: var(--blue-bg-color);
+    transition: 50ms ease-in-out;
+    cursor: pointer;
+}
+
+.start-game:active {
+    background-color: white;
+    color: var(--blue-bg-color);
+}
+
+.login-dialog {
+    margin: auto;
+    padding: 20px 50px;
+    border-radius: 10px;
+    border: none;
+}
+
+.login-dialog::backdrop {
+    backdrop-filter: blur(4px);
+}
+
+.login-dialog > form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.form-row > button {
+    flex: 1;
+
+    padding: 10px;
+    font-size: 18pt;
+    font-weight: bold;
+    background-color: white;
+    color: var(--blue-bg-color);
+    border: 1px solid var(--blue-bg-color);
+    border-radius: 10px;
+}
+
+.form-row > button:hover {
+    color: white;
+    background-color: var(--blue-bg-color);
+    cursor: pointer;
+}
+
+.form-row > button:active {
+    color: var(--blue-bg-color);
+    background-color: white;
+}
+
+.form-row > input {
+    outline: none;
+    padding: 5px;
+    font-size: 12pt;
+    border-radius: 7.5px;
+}
+
+.turn {
+    background-color: var(--blue-bg-color);
+    color: white;
+}
+
+.display-none {
+    display: none;
+}
